@@ -40,15 +40,13 @@ body {
 .hero {
   position: relative;
   width: 100%;
-  height: 80vh; /* fills top areaa */
   overflow: hidden;
-  margin-top: -40px;
+  padding-bottom: 50px;
 }
 
 .hero img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
 }
 
@@ -56,7 +54,7 @@ body {
   position: absolute;
   top: 10%; /* 1/3 of the way down  hero */
   left: 0;
-  width: 90%;
+  width: 100%;
   height: 10%;
   padding: 1rem 5%;
   display: flex;
@@ -182,7 +180,7 @@ footer p {
 </head>
 <body>
 
-  <section class="hero">
+  <div class="hero">
 
     <img src="images/hero3b.webp" alt="hero">
 
@@ -199,9 +197,9 @@ footer p {
     </nav>
   </header>
 
-  </section>
+    </div>
 
-  <section class="fall-special">
+  <div class="fall-special">
     <h2>Fall Special!</h2>
     <div class="special-content">
       <img src="images/special.webp" alt="Pumpkin cookies and coffee">
@@ -211,7 +209,7 @@ footer p {
         <p>Our cookies are baked fresh each day to ensure you have that just-out-of-the-oven experience!</p>
       </div>
     </div>
-  </section>
+</div>
 
   <section class="about">
     <h2>Who Are We?</h2>
