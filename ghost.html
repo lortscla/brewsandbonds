@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructional Site. Making Historic PA Iron Slag Pendants</title> 
+
+    <link href="hamburgers.css" rel="stylesheet"> 
+
+   <link rel="icon" type="images/png" href="/images/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="images/svg+xml" href="/images/favicon/favicon.svg" />
+<link rel="shortcut icon" href="/images/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
+<link rel="manifest" href="/images/favicon/site.webmanifest" />
+
+    <style>
+
+     :root {
+        --header-color: #1B2A67;
+        --black-text-color: #000;
+        --hover-color: #2b6783;
+        --font-family: 'Lateef', serif;
+      }
+
+      html, body{
+        margin:0;
+        padding:0;
+        overflow-x: hidden;
+      } 
+
+      body {
+        background-image: url('images/bg-image.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+        }
+
+      #top-bar { 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        z-index:2;
+        position: relative;
+        margin-bottom: -20px;
+      }
+
+      header {
+        width: calc(100%-40px);
+        text-align: center;
+        margin: 0 auto;
+        padding: 30px 20px 0 20px;
+      }
+      
+      header a {
+        font-size: 60px;
+        font-family: var(--font-family);
+        color: var(--header-color);
+        margin:0;
+        letter-spacing: 0.5px;
+        text-decoration: none;
+      }
+
+      h2 {
+        font-family: var(--font-family);
+        font-size: 30px;
+      }
+      #primary-nav { 
+        display: block;
+        width: 100%;
+        margin: 0 0 -15px 0;
+      }
+
+     #primary-nav li:nth-child(2) a {
+        text-decoration: underline;
+        text-underline-offset: 10px;
+        text-decoration-thickness: 2px;
+        text-decoration-color: var(--black-text-color);
+        }
+        
+     .connector-line {
+        width: 3px;
+        height: 30px;
+        background-color: var(--black-text-color);
+        margin-left: -20px;
+        }
+
+      .nav-menu {
+        display: flex;
+        width: 100%;
+        padding: 20px;
+        justify-content: center;
+      }
+
+      #primary-nav ul {
+        list-style: none; 
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center; 
+        gap: 220px;
+        align-items: center;
+      }
+
+      #primary-nav a {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 25px;
+        color: var(--header-color);
+      }
+
+      #primary-nav a:hover, 
+      #secondary-nav a:hover {
+        color: var(--hover-color);   
+        }  
+
+      #primary-nav a:visited, 
+      #secondary-nav a:visited {
+        text-decoration: none;
+        }  
+        
+      .steps-img-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 1440px;
+        margin: 0 auto;
+        }
+
+        .nav-steps {
+        justify-content: center;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        }
+       
+      .hero {
+          margin: -5px auto;
+          mask-image: linear-gradient(to bottom, black 78%, transparent 100%);
+          z-index: 1;
+          width:100%;
+        }
+
+        .nav-steps,
+        .hero {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+        
+      #secondary-nav { 
+        display: flex;
+        justify-content: center;
+        background-color: rgb(255, 255, 255);
+        border: 0.5px solid rgb(34, 34, 34);
+        z-index: 2;
+        padding: 15px;
+        width: 1440px;
+        margin:0 auto;
+      }
+
+      #secondary-nav li {
+        flex: 1;
+        text-align: center;
+      }
+
+      #secondary-nav ol {
+        list-style: none; 
+        padding: 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+      }
+
+      #secondary-nav a {
+        text-decoration: none;
+        font-weight: regular;
+        font-size: 20px;
+        color: var(--black-text-color);
+      }
+
+      body {
+            margin: 0;
+        }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+        margin: 0 auto;
+        width: 1440px;
+      }
+
+      .text {
+        margin: 0 auto;
+        font-size: 25px;
+        width: 70%;
+        color: var(--black-text-color);
+        padding: 50px 0 50px 0;
+      }
+     
+        footer {
+        color: var(--black-text-color); 
+        width:100%;
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+        margin-top: 100px; 
+        display: flex;
+        flex-direction: row;
+      }
+
+      .footer-left {
+        flex:1;
+        text-align: left;
+        padding-left:10px;
+      }
+
+       .footer-left {
+        flex:1;
+        text-align: left;
+        padding-left: 10px;
+      }
+
+       .footer-left a {
+        color: var(--black-text-color);
+      } 
+
+      .footer-center {
+        flex:1;
+      }
+
+      .footer-right {
+        flex:1;
+        text-align: right; 
+        flex-direction: column;
+        padding-right: 10px;
+        }
+
+      .footer-right a {
+        color: var(--black-text-color);
+      }  
+
+      .footer-right a:hover {
+        color: var(--hover-color); 
+      }
+
+      .sm-icons {
+        padding: 20px 0 20px 20px;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .steps-item {
+        display: none;
+      }
+
+      .chevron-arrow {
+        display: none;
+      }
+
+      #mobile-secondary-nav {
+        display: none;
+      }
+
+               /*HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
+
+        @media screen and (max-width: 767px) {
+           
+       h1 a {
+            font-size: 15px;
+          }
+
+          header {
+            padding: 0;
+            margin: -15px -10px -30px -10px;
+          }
+
+          #primary-nav a {
+            font-size: 18px;
+          }
+
+          #primary-nav ul {
+               gap: 90px;
+          }
+
+          h2 {
+            font-size: 13px;
+            text-align: center;
+            padding: 15px;
+          }
+
+            #primary-nav ul {
+           flex-direction: row;
+           gap: 30px;
+           border-top: 1px solid #ccc;
+           margin-top: 10px;
+           padding: 10px 0;
+           }
+
+           #primary-nav.show {
+            display: block;
+           }
+         
+          #primary-nav a{
+            font-size: 13px;
+            color: var(--black-text-color);
+          }
+
+          .nav-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top:0;
+          }
+
+         .connector-line {
+           display: none;
+         }
+
+         .steps-img-container{
+          width: 90%;
+         }
+
+          #primary-nav a{
+            font-size: 13px;
+            color: var(--black-text-color);
+          }
+
+         #primary-nav li:nth-child(2) a {
+          text-decoration:none;
+         }
+
+         .chevron-arrow {
+            display: flex;
+            font-size: 15px;
+            color: var(--header-color);
+            line-height: 1;
+            justify-content: center;
+            color: var(--black-text-color);
+          }
+
+          #secondary-nav {
+            display: none;
+          }
+
+          #mobile-secondary-nav {
+             display: none;
+            flex-direction: column;
+            background: white;
+            border: 1px solid #000;
+            width: 135px;
+            margin: 0;
+            border-radius: 5px;
+            position: absolute;
+            top: 100%; /* directly below Steps */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            padding: 9px 0 9px 0;
+          }
+
+          #mobile-secondary-nav.show {
+            display: flex;
+          }
+
+          #mobile-secondary-nav.show a {
+            text-align: center;
+            color: var(--black-text-color);
+            font-size: 12px;
+            padding: 5;
+            padding-bottom: 8px;
+            text-decoration: none;
+          }
+
+          #mobile-secondary-nav.show a:hover {
+            color: var(--hover-color);
+          }
+
+          .steps-item {
+            position: relative; 
+            display: flex; 
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            margin-left: -6px;
+          }
+
+              #toggle-nav-btn {
+            display: inline-block;
+            background: none;
+            border: none;
+            cursor:pointer;
+            vertical-align:middle;
+            transform: scale(0.7);
+            padding: 5px;
+          }
+
+          #mobile-secondary-nav.show {
+            display: flex;
+          }
+
+          #mobile-secondary-nav a {
+            text-decoration: none;
+            color: var(--header-color);
+            font-size: 18px;
+            text-align: center;
+            padding: 8px;
+          }
+
+          .text {
+            order: 2;
+            margin:0 auto;
+            width: 90%;
+            font-size: 12px;
+            padding: 10px 0 10px 0;
+          }
+
+          .progression-buttons {
+            padding:0;
+          }
+
+          .container {
+            width: 90%;
+          } 
+
+          .hero img { 
+            width: 300px;
+            margin: 0 auto;
+          }
+
+          .hero {
+            order: 1;
+          }
+
+          .progression-buttons {
+            order:3;
+            width: 80%;
+          }
+
+          .progression-buttons a {
+            font-size: 12px;
+            padding: 10px;
+          }
+
+          footer {
+            order:4;
+            width: 100%;
+            font-size: 9px;
+            margin: 0;
+            display: flex;
+            flex-wrap: nowrap; 
+            align-items: center;
+            gap: 5px;
+          }
+
+          .footer-left {
+            flex: 1;
+            text-align: left;
+            padding-left: 5px;
+            min-width: 0; 
+            font-size: 6px;
+          }
+
+          .footer-center {
+            flex: 1;
+            text-align: center;
+            white-space: nowrap; 
+            min-width: 0;
+          }
+
+          .footer-center p {
+            margin: 0;
+            font-size: 6px;
+          }
+
+          .footer-right {
+            flex: 1;
+            text-align: right;
+            padding-right: 5px;
+            }
+
+          .sm-icons {
+            padding: 10px 5px 10px 0;
+            display:flex;
+            gap:0px;
+            justify-content: flex-end;
+          }
+
+          .sm-icons img {
+            display: flex;
+          }
+
+          .sm-icons img {
+            width: 25px; 
+            height: auto;
+          }
+
+          .sm-icons a:first-child img {
+            width: 30px; /*for some reason fb is smaller than ig ...*/
+          }
+        }
+                /*HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
+    </style> 
+    
+</head>
+<body>
+
+    <div id="top-bar">
+       
+         <header>
+      <h1><a href="index.html">Making Historic PA Iron Slag Pendants</a></h1>
+      </header>
+      
+         <div class="nav-menu">
+       <nav id="primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+            <li><a href="step-1.html">Steps</a></li>    
+          <li><a href="history.html">History</a></li>
+        </ul>
+
+        <div class="steps-item">
+            <span class="chevron-arrow">▼</span>
+              <button id="toggle-nav-btn" class="hamburger hamburger--elastic" type="button">
+                <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+              </button>
+              <nav id="mobile-secondary-nav">
+                <a href="step-1.html">1. Finding Slag</a>
+                <a href="step-2.html">2. Cutting Slag</a>
+                <a href="step-3.html">3. Shaping Slag</a>
+                <a href="step-4.html">4. Silver Designing</a>
+                <a href="step-5.html">5. Silver Soldering</a>
+                <a href="step-6.html">6. Piece Finishing</a>
+              </nav>
+            </div>
+
+       </nav>
+      </div> 
+
+      <div class="connector-line"></div> 
+
+      <div class="steps-img-container">
+
+      <div class="nav-steps">
+       <nav id="secondary-nav">
+        <ol>
+          <li><a href="step-1.html">1. Finding Slag</a></li>
+          <li><a href="step-2.html">2. Cutting Slag</a></li>
+          <li><a href="step-3.html">3. Shaping Slag</a></li>
+          <li><a href="step-4.html">4. Silver Designing</a></li>
+          <li><a href="step-5.html">5. Silver Soldering</a></li>
+          <li><a href="step-6.html">6. Piece Finishing</a></li>
+        </ol>
+       </nav>
+      </div> 
+
+      <div class="hero">
+        <img src="images/hero.webp" alt="Finishing 1" width="1440">
+      </div>
+
+      </div>
+
+     </div>
+
+    <main>
+
+      <div class="container">
+
+      <div class="text"> 
+
+        <p>
+          <h2>Welcome to this step-by-step tutorial on creating historic iron slag pendants!</h2> In this guide, you’ll learn how to find and identify unique slag pieces, then transform them through lapidary techniques such as cutting, grinding, shaping, and polishing into striking cabochons. From there, we’ll cover designing a sterling silver setting design that complements your cabochon, teaching you how to fabricate, assemble, solder, fire, and finish the sterling silver setting. Then to put it all together, we’ll cover setting your cabochon into your finished setting. By the end, you’ll not only learn to craft a unique piece of wearable history but also appreciate the artistry of turning industrial remnants into beautiful jewelry. 
+        </p>
+
+       </div>
+
+      <footer>
+
+        <div class="footer-left">
+          <div> <a href="mailto: info@slagpendants.com"> 
+            info@slagpendants.com
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-center">
+           <p> @ 2025 Creating PA Slag Pendants</p>
+        </div>
+
+        <div class="footer-right">
+          <div class="sm-icons">
+            <a href="https://www.facebook.com "> 
+              <img src="images/fb-bw.webp" alt="FB" width="60" >
+            </a>
+            <a href="https://www.instagram.com "> 
+              <img src="images/ig-bw.webp" alt="IG" width="55">
+            </a>
+          </div>
+        </div>
+
+      </footer>
+      </div>
+     </main>
+
+     <script>
+window.onload = () => {
+  const toggleNavBtn = document.getElementById("toggle-nav-btn");
+  const mobileSteps = document.getElementById("mobile-secondary-nav");
+
+  toggleNavBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    mobileSteps.classList.toggle("show");
+    toggleNavBtn.classList.toggle("is-active");
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".steps-item")) {
+      mobileSteps.classList.remove("show");
+      toggleNavBtn.classList.remove("is-active");
+    }
+  });
+};
+     </script>
+</body>
+</html>

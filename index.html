@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brews & Bonds</title> 
+
+    <link href="hamburgers.css" rel="stylesheet"> 
+
+        <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+<link rel="shortcut icon" href="/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="MyWebSite" />
+<link rel="manifest" href="/favicon/site.webmanifest" />
+
+    <style>
+
+     :root {
+        --header-color: #1B2A67;
+        --black-text-color: #000;
+        --hover-color: #2b6783;
+        --body-font-family: 'Instrument Sans', sans-serif;
+        --header-font-family: 'Merriweather', serif;
+      }
+
+     *{ /* the * means all on the page */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* fills top areaa */
+  overflow: hidden;
+  margin-top: -40px;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.navbar {
+  position: absolute;
+  top: 10%; /* 1/3 of the way down  hero */
+  left: 0;
+  width: 90%;
+  height: 10%;
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.5); /* decimal indicates transparency */
+  backdrop-filter: blur(3px);
+  z-index: 2;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+  max-width: 150px;
+  object-fit: contain;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+section {
+  padding: 3rem 5%;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.fall-special .special-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.fall-special img {
+    display: flex;
+    flex-direction: row;
+  max-width: 350px;
+  border-radius: 8px;
+}
+
+.special-text {
+  max-width: 500px;
+}
+
+.about .about-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.about img {
+  max-width: 350px;
+  border-radius: 8px;
+}
+
+.about-text {
+  max-width: 500px;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+footer p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+.socials img {
+  width: 60px;
+  margin: 0 8px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .fall-special .special-content,
+  .about .about-content {
+    flex-direction: column;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+}
+
+</style>
+
+</head>
+<body>
+
+  <section class="hero">
+
+    <img src="images/hero3b.webp" alt="hero">
+
+      <header class="navbar">
+    <div class="logo">
+      <img src="images/logo.webp" alt="logo">
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Drink Menu</a></li>
+        <li><a href="#">Food Menu</a></li>
+        <li><a href="#">Weekly Events</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  </section>
+
+  <section class="fall-special">
+    <h2>Fall Special!</h2>
+    <div class="special-content">
+      <img src="images/special.webp" alt="Pumpkin cookies and coffee">
+      <div class="special-text">
+        <h3>Pumpkin Cookies with Pumpkin Coffee, $4.00</h3>
+        <p>Enjoy the taste of fall with our home-made pumpkin cookies and pumpkin spiced coffee!</p>
+        <p>Our cookies are baked fresh each day to ensure you have that just-out-of-the-oven experience!</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>Who Are We?</h2>
+    <div class="about-content">
+      <img src="images/thecouple2.webp" alt="Couple enjoying coffee outdoors">
+      <div class="about-text">
+        <p>While in San Francisco, we shared an unwavering love for the rich aromas, the intricate flavors, and the sense of community that surrounded a simple cup of joe.</p>
+        <p>After moving to Harrisburg, PA, we decided it was the perfect place to bring our coffee dreams to life. Inspired by our time in San Francisco, Brews & Bonds captures the essence of the vibrant coffee culture we experienced, creating a sanctuary where people can gather, connect, and forge new friendships.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-info">
+      <p>717-123-4567, info@babb.com</p>
+      <p>123 Main St, Harrisburg PA., 17025</p>
+    </div>
+    <div class="footer-hours">
+      <p>Open Everyday 7 am - 7 pm</p>
+      <p>2025 © Brews & Bonds</p>
+    </div>
+    <div class="socials">
+      <a href="#"><img src="images/ig-bw.webp" alt="Instagram"></a>
+      <a href="#"><img src="images/fb-bw.webp" alt="Facebook"></a>
+    </div>
+  </footer>
+
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.querySelector('.nav-links');
+  const logo = document.querySelector('.logo');
+  
+  logo.addEventListener('click', () => {
+    nav.classList.toggle('show');
+  });
+});
+</script>
+
+</body>
+</html>
+
