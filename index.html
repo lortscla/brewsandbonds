@@ -17,18 +17,25 @@
     <style>
 
 :root {
-  --header-color: #a14b00;
+  --h1-color: #a14b00;
   --black-text-color: #000;
-  --hover-color: #2b6783;
+  --hover-color: #ac7937;
   --body-font-family: 'Instrument Sans', sans-serif;
   --header-font-family: 'Merriweather', serif;
+  --h1-font-weight: bold;
+  --h2-font-weight: bold;
+  --h1-font-size: 40px;
+  --h2-font-size: 20px;
+  --body-font-size: 16px;
+  --button-background-color: #522f07;
+  --button-text-color: #fff;
 }
 
 .hero {
   position: relative;
   width: 100%;
-  overflow: hidden;
-  padding-bottom: 50px;
+  max-height: 600px;
+  padding-bottom: 20px;
 }
 
 .hero img {
@@ -71,18 +78,25 @@
 
 .nav-links a {
   text-decoration: none;
-  color: #000;
-  font-weight: 500;
+  color: var(--black-text-color);
+  font-weight: var(--h2-font-weight);
   font-size: 20px;
-  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: var(--hover-color);
 }
 
 /*----------------------------------------- body -----------------------------------------*/
 
-.container {
+.container-home {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 20px 0 20px 0;
+}
+
+.container-about {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 h1 {
@@ -90,17 +104,40 @@ h1 {
   font-family: var(--header-font-family);
   color: var(--header-color);
   font-size: 40px;
+  padding-bottom: 20px;
 }
 
-.fall-special , 
-.about  {
+h2 {
+  font-family: var(--body-font-family);
+  color: var(--black-text-color);
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 10px;
+}
+ 
+.home {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin: 0 auto;
   align-items: center;
 }
 
-.fall-special img,
+.about  {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.home img {
+  width: 150%;
+  left: -25%;
+  height: auto;
+  display: block;
+  position: relative
+}
+
 .about img {
   max-width: 800px; 
   width: 100%;
@@ -110,11 +147,44 @@ h1 {
   align-items: flex-start;
 }
 
-.about-text, 
-.special-text {
-  padding: 20px;
-  max-width: 600px;
+.home-text {
+  max-width: 700px;
   font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  color: var(--black-text-color);
+  text-align: center;
+}
+
+.home-text-review {
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  color: var(--black-text-color);
+  text-align: left;
+  padding: 20px;
+}
+
+.about-text {
+  padding: 0 0 20px 20px;
+  max-width: 700px;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  color: var(--black-text-color);
+}
+
+.home-cta {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: var(--button-background-color);
+  border-radius: 10px;
+}
+
+.home-cta a {
+  text-decoration: none;
+  color: var(--button-text-color);
+  font-weight: bold;
 }
 
 /*----------------------------------------- footer -----------------------------------------*/
@@ -156,7 +226,7 @@ footer p {
     gap: 1rem;
   }
 
-  .fall-special img,
+  .home img,
   .about img {
     max-width: 100%;
     margin-left: 0;
@@ -193,26 +263,34 @@ footer p {
 
     </div>
 
-   <!------------------------------------------ Home ---------------------------------------->
+   <!------------------------------------------ Home (Fall Special) ---------------------------------------->
 
-  <div class="container">
+  <div class="container-home">
 
     <h1>Fall Special!</h1>
 
-    <div class="fall-special">
+    <h2>Pumpkin Cookies with Pumpkin Coffee, $4.00</h2>
+
+    <div class="home">
       <div><img src="images/special.webp" alt="Pumpkin cookies and coffee"></div>
-      <div class="special-text">
-        <h3>Pumpkin Cookies with Pumpkin Coffee, $4.00</h3>
+      <div class="home-text">
         <p>Enjoy the taste of fall with our home-made pumpkin cookies and pumpkin spiced coffee!</p>
         <p>Our cookies are baked fresh each day to ensure you have that just-out-of-the-oven experience!</p>
+        <p><strong>Find more delicious menu items with our food menu:</strong></p>
+        <button class="home-cta"><a href="food-menu.html">Food Menu</a></button>
       </div>
     </div>
 
+    <div class="home-text-review">
+      <p><strong>* * * * * Julia, Yelp, 2025</strong></p>
+      <p>Brews & Bonds is an absolute gem! From the moment you walk in, you’re greeted by the comforting aroma of freshly brewed coffee and the cozy, welcoming atmosphere that makes you want to stay awhile. The drinks are crafted with care — every latte and seasonal special is full of flavor and perfectly balanced. The food is just as impressive — fresh, delicious, and clearly made with love.</p>
+      <p>What truly makes this place special, though, is the vibe. It’s the perfect spot to slow down, unwind, and really connect — whether you’re catching up with friends, spending quiet time with a loved one, or even just taking a moment for yourself. Brews & Bonds has become my go-to café for both great coffee and genuine community.</p>
+      <p>Can’t recommend it highly enough! - Julia</p>
     </div>
 
     <!------------------------------------------ About ---------------------------------------->
 
-  <div class="container">
+  <div class="container-about">
 
   <h1>Who Are We?</h1>
 
