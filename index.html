@@ -336,39 +336,329 @@ footer p {
   margin: 0 8px;
 }
 
-@media (max-width: 768px) {
+.hamburger {
+  display: none;
+}
+
+#hamburger-btn {
+  display: none;
+}
+
+/*----------------------------------------- MOBILE 800px -----------------------------------------*/
+
+@media (max-width: 800px) {
   .navbar {
     position: static;
     background: #fff;
     padding: 1rem 0;
+    gap: 2rem;
   }
 
   .logo img {
-    height: 70px;
+    height: 150px;
   }
 
-  .nav-links {
+  #hamburger-btn {
+    display: none;
+  }
+
+  .navbar > nav .nav-links {
     flex-direction: column;
     gap: 1rem;
+    padding: 15px;
   }
 
   .home img,
   .about img {
-    max-width: 100%;
-    margin-left: 0;
+    width: 100%;
+    left: 0;
+    position: static;
+  }
+
+  .coffee-menu,
+  .other-drinks-menu-main {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .coffee-menu .col-1,
+  .coffee-menu .col-2,
+  .other-drinks-menu-main .col-1,
+  .other-drinks-menu-main .col-2 {
+    gap: 20px;
+  }
+
+  .container-drink-menu {
+    flex-direction: column;
+    gap: 30px;
   }
   
   .teas ul {
-     grid-template-columns: repeat(2, 1fr);
-    }
-        
- }
-     
-@media (max-width: 480px) {
-            ul {
-                grid-template-columns: 1fr;
-            }
-        }
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sweet-items,
+  .savory-items {
+    gap: 30px;
+  }
+
+  .container-weekly-events {
+    padding: 0 15px;
+  }
+
+  .shaded-box,
+  .non-shaded-box {
+    padding: 15px 10px;
+  }
+
+  .container-weekly-events p {
+    padding: 0 10px;
+  }
+}
+
+/*----------------------------------------- MOBILE 320px -----------------------------------------*/
+
+@media (max-width: 320px) {
+  .hero {
+    position: relative;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 0;
+    gap: 0;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+  }
+
+  .logo img {
+    height: 60px;
+  }
+
+  /* Hide the regular nav, show hamburger nav */
+  .navbar > nav {
+    display: none;
+  }
+
+  #hamburger-btn {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 15px;
+    z-index: 1000;
+  }
+
+  #hamburger-btn .hamburger {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    background: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .hamburger-box {
+    width: 30px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+  }
+
+  .hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+  }
+
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    width: 30px;
+    height: 3px;
+    background-color: var(--black-text-color);
+    border-radius: 4px;
+    position: absolute;
+    transition: transform 0.15s ease;
+  }
+
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    content: "";
+    display: block;
+  }
+
+  .hamburger-inner::before {
+    top: -8px;
+  }
+
+  .hamburger-inner::after {
+    bottom: -8px;
+  }
+
+  .hamburger.is-active .hamburger-inner {
+    transform: rotate(45deg);
+  }
+
+  .hamburger.is-active .hamburger-inner::before {
+    top: 0;
+    opacity: 0;
+  }
+
+  .hamburger.is-active .hamburger-inner::after {
+    bottom: 0;
+    transform: rotate(-90deg);
+  }
+
+  #hamburger-btn > nav {
+    display: block;
+  }
+
+  #hamburger-btn .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 100%;
+    max-width: 250px;
+    flex-direction: column;
+    gap: 0;
+    padding: 80px 0 20px;
+    transition: right 0.3s ease;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    border-radius: 0;
+    margin: 0;
+    z-index: 999;
+    list-style: none;
+    text-align: center;
+  }
+
+  #hamburger-btn .nav-links.show {
+    right: 0;
+  }
+
+  #hamburger-btn .nav-links li {
+    border-bottom: 1px solid #eee;
+  }
+
+  #hamburger-btn .nav-links li:last-child {
+    border-bottom: none;
+  }
+
+  #hamburger-btn .nav-links a {
+    font-size: 18px;
+    font-weight: var(--h2-font-weight);
+    display: block;
+    padding: 20px;
+    color: var(--black-text-color);
+  }
+
+  #hamburger-btn .nav-links a:hover {
+    background-color: #f5f5f5;
+    color: var(--hover-color);
+  }
+
+  /* Center all content */
+  .container-home,
+  .container-about,
+  .container-food-menu,
+  .container-drink-menu,
+  .container-weekly-events {
+    padding: 0 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  .home-text,
+  .about-text,
+  .home-text-review {
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .home-text-review {
+    text-align: left;
+  }
+
+  .home {
+    align-items: center;
+    text-align: center;
+  }
+
+  .about {
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .home-cta {
+    margin: 15px auto;
+  }
+
+  .teas ul {
+    grid-template-columns: 1fr;
+  }
+
+  .sweet-items img,
+  .savory-items img {
+    width: 250px;
+    height: 230px;
+  }
+
+  .coffee-menu .col-1,
+  .coffee-menu .col-2,
+  .other-drinks-menu-main .col-1,
+  .other-drinks-menu-main .col-2 {
+    gap: 15px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .socials img {
+    width: 40px;
+  }
+
+  .container-weekly-events {
+    padding: 0 10px;
+  }
+
+  .container-weekly-events p {
+    text-align: center;
+  }
+}
 
 </style>
 
@@ -396,6 +686,22 @@ footer p {
         <li><a href="about.html">About</a></li>
       </ul>
     </nav>
+    
+    <div id="hamburger-btn">
+        <button class="hamburger hamburger--elastic" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+      </button>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="drink-menu.html">Drink Menu</a></li>
+        <li><a href="food-menu.html">Food Menu</a></li>
+        <li><a href="weekly-events.html">Weekly Events</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
 
   </header>
 
@@ -706,22 +1012,32 @@ footer p {
 
   <script>
 
-window.onload = () => {
-  const toggleNavBtn = document.getElementById("toggle-nav-btn");
-  const mobileSteps = document.getElementById("mobile-secondary-nav");
+      window.onload = () => {
+  const hamburgerBtn = document.querySelector("#hamburger-btn .hamburger");
+  const navLinks = document.querySelector("#hamburger-btn .nav-links");
 
-  toggleNavBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    mobileSteps.classList.toggle("show");
-    toggleNavBtn.classList.toggle("is-active");
-  });
+  if (hamburgerBtn && navLinks) {
+    hamburgerBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      navLinks.classList.toggle("show");
+      hamburgerBtn.classList.toggle("is-active");
+    });
 
-  document.addEventListener("click", (event) => {
-    if (!event.target.closest(".steps-item")) {
-      mobileSteps.classList.remove("show");
-      toggleNavBtn.classList.remove("is-active");
-    }
-  });
+    document.addEventListener("click", (event) => {
+      if (!event.target.closest("#hamburger-btn")) {
+        navLinks.classList.remove("show");
+        hamburgerBtn.classList.remove("is-active");
+      }
+    });
+
+    const navLinksItems = navLinks.querySelectorAll("a");
+    navLinksItems.forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("show");
+        hamburgerBtn.classList.remove("is-active");
+      });
+    });
+  }
 };
 
 </script>
