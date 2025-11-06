@@ -63,6 +63,7 @@
   height: 300px; 
   width: auto;
   display: block;
+  transition: transform 0.3s ease;
 }
 
 .nav-links {
@@ -85,6 +86,11 @@
 
 .nav-links a:hover {
   color: var(--hover-color);
+}
+
+.logo img:hover {
+    filter: brightness(1.2);
+    transform: translateY(-5px);
 }
 
 /*----------------------------------------- body -----------------------------------------*/
