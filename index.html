@@ -104,7 +104,6 @@ h1 {
   font-family: var(--header-font-family);
   color: var(--header-color);
   font-size: 40px;
-  padding-bottom: 20px;
 }
 
 h2 {
@@ -154,21 +153,25 @@ h3 {
   position: relative;
 }
 
-.sweet-items {
+.sweet-items,
+.savory-items {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 50px;
   padding: 20px;
 }
 
-.sweet-items img {
+.sweet-items img,
+.savory-items img {
   width: 329px;
   height: 302px;
   display: block;
   object-fit: cover;
 }
 
-.sweet-items p {
+.sweet-items p,
+.savory-items p {
   text-align: center;
   font-family: var(--body-font-family);
   font-size: var(--body-font-size);
@@ -339,7 +342,7 @@ footer p {
 
     <h3>Our kitchen is open 7 am - 7 pm everyday!</h3>
 
-  <h1>Savory</h1>
+  <h1>Sweet</h1>
 
     <div class="sweet-items">
 
@@ -351,6 +354,47 @@ footer p {
         <div>
           <p>Scone - $3.00</p>
           <img src="images/pastry.webp" alt="scone">
+        </div>
+
+        <div>
+          <p>Fruit Parfait - $4.50</p>
+          <img src="images/yogurt.webp" alt="scone">
+        </div>
+
+    </div>
+
+    <h1>Savory</h1>
+
+    <div class="savory-items">
+
+        <div>
+          <p>Croissant - $2.50</p>
+          <img src="images/croissant.webp" alt="mufffin">
+        </div>
+
+        <div>
+          <p>Bagel - $3.00</p>
+          <img src="images/bagel.webp" alt="scone">
+        </div>
+
+        <div>
+          <p>Ham & Cheese - $6.00</p>
+          <img src="images/sandwitch.webp" alt="scone">
+        </div>
+
+        <div>
+          <p>Chicken Salad - $2.50</p>
+          <img src="images/chx-salad.webp" alt="mufffin">
+        </div>
+
+        <div>
+          <p>Quiche - $5.50</p>
+          <img src="images/quiche.webp" alt="scone">
+        </div>
+
+        <div>
+          <p>Soup of the Day - $6.50</p>
+          <img src="images/soup.webp" alt="scone">
         </div>
 
     </div>
