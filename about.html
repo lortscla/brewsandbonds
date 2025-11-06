@@ -77,22 +77,19 @@
   font-weight: bold;
 }
 
-/*----------------------------------------- body -----------------------------------------*/
-
 .container {
   max-width: 1440px;
   margin: 0 auto;
   padding: 20px 0 20px 0;
 }
 
-h1 {
+h2 {
   text-align: center;      
   font-family: var(--header-font-family);
   color: var(--header-color);
   font-size: 40px;
 }
 
-.fall-special , 
 .about  {
   display: flex;
   flex-direction: row;
@@ -100,7 +97,6 @@ h1 {
   align-items: center;
 }
 
-.fall-special img,
 .about img {
   max-width: 800px; 
   width: 100%;
@@ -110,14 +106,11 @@ h1 {
   align-items: flex-start;
 }
 
-.about-text, 
-.special-text {
+.about-text {
   padding: 20px;
   max-width: 600px;
   font-family: var(--body-font-family);
 }
-
-/*----------------------------------------- footer -----------------------------------------*/
 
 footer {
   display: flex;
@@ -156,7 +149,6 @@ footer p {
     gap: 1rem;
   }
 
-  .fall-special img,
   .about img {
     max-width: 100%;
     margin-left: 0;
@@ -169,12 +161,12 @@ footer p {
 <body>
 
   <div class="hero">
-    
+
     <img src="images/hero3b.webp" alt="hero">
 
   <header class="navbar">
 
-    <div class="logo">
+     <div class="logo">
       <a href="index.html">
       <img src="images/logo.webp" alt="logo">
       </a>
@@ -182,10 +174,10 @@ footer p {
 
     <nav>
       <ul class="nav-links">
-        <li><a href="drink-menu.html">Drink Menu</a></li>
-        <li><a href="food-menu.html">Food Menu</a></li>
-        <li><a href="weekly-events.html">Weekly Events</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="#">Drink Menu</a></li>
+        <li><a href="#">Food Menu</a></li>
+        <li><a href="#">Weekly Events</a></li>
+        <li><a href="#">About</a></li>
       </ul>
     </nav>
 
@@ -193,28 +185,9 @@ footer p {
 
     </div>
 
-   <!------------------------------------------ Home ---------------------------------------->
-
   <div class="container">
 
-    <h1>Fall Special!</h1>
-
-    <div class="fall-special">
-      <div><img src="images/special.webp" alt="Pumpkin cookies and coffee"></div>
-      <div class="special-text">
-        <h3>Pumpkin Cookies with Pumpkin Coffee, $4.00</h3>
-        <p>Enjoy the taste of fall with our home-made pumpkin cookies and pumpkin spiced coffee!</p>
-        <p>Our cookies are baked fresh each day to ensure you have that just-out-of-the-oven experience!</p>
-      </div>
-    </div>
-
-    </div>
-
-    <!------------------------------------------ About ---------------------------------------->
-
-  <div class="container">
-
-  <h1>Who Are We?</h1>
+    <h2>Who Are We?</h2>
 
     <div class="about">
       <div><img src="images/thecouple2.webp" alt="Couple enjoying coffee outdoors"></div>
@@ -223,10 +196,6 @@ footer p {
         <p>After moving to Harrisburg, PA, we decided it was the perfect place to bring our coffee dreams to life. Inspired by our time in San Francisco, Brews & Bonds captures the essence of the vibrant coffee culture we experienced, creating a sanctuary where people can gather, connect, and forge new friendships.</p>
       </div>
     </div>
-
-  </div>
-
-    <!------------------------------------------ Footer ---------------------------------------->
 
   <footer>
     <div class="footer-info">
