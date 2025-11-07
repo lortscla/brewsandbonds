@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brews & Bonds</title> 
+
+    <link href="hamburgers.css" rel="stylesheet"> 
+    <link href="style.css" rel="stylesheet">
+    <link href="script.js" rel="script">
+
+        <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+<link rel="shortcut icon" href="/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="MyWebSite" />
+<link rel="manifest" href="/favicon/site.webmanifest" />
+
+    <style>
+
+:root {
+  --h1-color: #a14b00;
+  --black-text-color: #000;
+  --hover-color: #ac7937;
+  --body-font-family: 'Instrument Sans', sans-serif;
+  --header-font-family: 'Merriweather', serif;
+  --h1-font-weight: bold;
+  --h2-font-weight: bold;
+  --h1-font-size: 40px;
+  --h2-font-size: 20px;
+  --body-font-size: 20px;
+  --button-background-color: #522f07;
+  --button-text-color: #fff;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  max-height: 600px;
+  padding-bottom: 20px;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.navbar {
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60%;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.logo img {
+  height: 300px; 
+  width: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  padding: 20px;
+  gap: 50px;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--black-text-color);
+  font-weight: var(--h2-font-weight);
+  font-size: 20px;
+}
+
+.nav-links a:hover {
+  color: var(--hover-color);
+}
+
+.logo img:hover {
+    filter: brightness(1.2);
+    transform: translateY(-5px);
+}
+
+/*----------------------------------------- body -----------------------------------------*/
+
+.container-home,
+.container-about,
+.container-food-menu,
+.container-drink-menu,
+.container-weekly-events {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container-drink-menu {
+  display:flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.container-weekly-events p {
+  text-align: center;      
+  font-family: var(--header-font-family);
+  color: var(--header-color);
+  font-size: var(--body-font-size);
+}
+
+.container-weekly-events p{
+  align-content: center;
+}
+
+.shaded-box {
+  background-color: #efefef;
+  margin: 0 auto;
+  width: 100%;
+  padding: 15px;
+}
+
+h1 {
+  text-align: center;      
+  font-family: var(--header-font-family);
+  color: var(--header-color);
+  font-size: 40px;
+}
+
+h2 {
+  font-family: var(--body-font-family);
+  color: var(--black-text-color);
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+h3 {
+  text-align: center;      
+  font-family: var(--body-font-family);
+  color: var(--black-text-color);
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+ 
+.home {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.about  {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.coffee-drinks,
+.other-drinks {
+  flex: 1;
+  margin:0 auto;
+  display:flex;
+  flex-direction: column;
+}
+
+.coffee-menu {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  gap: 200px;
+}
+
+.coffee-menu .col-1,
+.coffee-menu .col-2,
+.other-drinks-menu-main .col-1,
+.other-drinks-menu-main .col-2 {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.other-drinks-menu-main .col-1 .drink-names {
+  width:max-content;
+}
+
+.other-drinks-menu {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.other-drinks-menu-main {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  gap: 200px;
+}
+
+.teas ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 30px;
+  list-style-position: inside;
+  padding:0;
+}
+
+.teas li {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  color: var(--black-text-color);
+  margin:0;
+}
+
+.home img {
+  width: 150%;
+  left: -25%;
+  height: auto;
+  display: block;
+  position: relative
+}
+
+.about img { 
+  width: 150%;
+  left: -25%;
+  height: auto;
+  display: block;
+  position: relative;
+}
+
+.sweet-items,
+.savory-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px;
+}
+
+.sweet-items img,
+.savory-items img {
+  width: 329px;
+  height: 302px;
+  display: block;
+  object-fit: cover;
+}
+
+.sweet-items p,
+.savory-items p {
+  text-align: center;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  color: var(--black-text-color);
+}
+
+.coffee-menu .col-1 p,
+.coffee-menu .col-2 p,
+.other-drinks-menu-main .col-1 p,
+.other-drinks-menu-main .col-2 p {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  color: var(--black-text-color);
+}
+
+.home-text {
+  max-width: 700px;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  color: var(--black-text-color);
+  text-align: center;
+}
+
+.home-text-review {
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  color: var(--black-text-color);
+  text-align: left;
+  padding: 20px;
+}
+
+.about-text {
+  padding: 0 0 20px 20px;
+  max-width: 900px;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  color: var(--black-text-color);
+}
+
+.home-cta {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: var(--button-background-color);
+  border-radius: 10px;
+}
+
+.home-cta a {
+  text-decoration: none;
+  color: var(--button-text-color);
+  font-weight: bold;
+}
+
+/*----------------------------------------- footer -----------------------------------------*/
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+footer p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+.socials img {
+  width: 60px;
+  margin: 0 8px;
+}
+
+.hamburger {
+  display: none;
+}
+
+#hamburger-btn {
+  display: none;
+}
+
+/*----------------------------------------- MOBILE 1265px -----------------------------------------*/
+
+@media (max-width: 1265px) {
+
+  .hero {
+    position: relative;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 0;
+    gap: 0;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+  }
+
+  .logo img {
+    height: 300px;
+  }
+
+  .navbar > nav {
+    display: none;
+  }
+
+  #hamburger-btn {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 60px;
+    z-index: 1000;
+  }
+
+  #hamburger-btn .hamburger {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    background: #fff;
+    border: none;
+    border-radius: 8px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .hamburger-box {
+    width: 30px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+  }
+
+  .hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+  }
+
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    width: 30px;
+    height: 3px;
+    background-color: var(--black-text-color);
+    border-radius: 4px;
+    position: absolute;
+    transition: transform 0.15s ease;
+  }
+
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    content: "";
+    display: block;
+  }
+
+  .hamburger-inner::before {
+    top: -8px;
+  }
+
+  .hamburger-inner::after {
+    bottom: -8px;
+  }
+
+  .hamburger.is-active .hamburger-inner {
+    transform: rotate(45deg);
+  }
+
+  .hamburger.is-active .hamburger-inner::before {
+    top: 0;
+    opacity: 0;
+  }
+
+  .hamburger.is-active .hamburger-inner::after {
+    bottom: 0;
+    transform: rotate(-90deg);
+  }
+
+  #hamburger-btn > nav {
+    display: block;
+  }
+
+  #hamburger-btn .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 100%;
+    max-width: 250px;
+    flex-direction: column;
+    gap: 0;
+    padding: 80px 0 20px;
+    transition: right 0.3s ease;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    border-radius: 0;
+    margin: 0;
+    z-index: 999;
+    list-style: none;
+    text-align: center;
+    align-items: center;
+  }
+
+  #hamburger-btn .nav-links.show {
+    right: 0;
+  }
+
+  #hamburger-btn .nav-links li {
+    border-bottom: 1px solid #eee;
+  }
+
+  #hamburger-btn .nav-links li:last-child {
+    border-bottom: none;
+  }
+
+  #hamburger-btn .nav-links a {
+    font-size: 18px;
+    font-weight: var(--h2-font-weight);
+    display: block;
+    padding: 20px;
+    color: var(--black-text-color);
+  }
+
+  #hamburger-btn .nav-links a:hover {
+    background-color: #f5f5f5;
+    color: var(--hover-color);
+  }
+
+}
+
+/*----------------------------------------- MOBILE 800px -----------------------------------------*/
+
+@media (max-width: 800px) {
+.hero {
+    position: relative;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 0;
+    gap: 0;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+  }
+
+  .logo img {
+    height: 200px;
+  }
+
+  .navbar > nav {
+    display: none;
+  }
+
+  #hamburger-btn {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 60px;
+    z-index: 1000;
+  }
+
+  #hamburger-btn .hamburger {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    background: #fff;
+    border: none;
+    border-radius: 8px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .hamburger-box {
+    width: 30px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+  }
+
+  .hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+  }
+
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    width: 30px;
+    height: 3px;
+    background-color: var(--black-text-color);
+    border-radius: 4px;
+    position: absolute;
+    transition: transform 0.15s ease;
+  }
+
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    content: "";
+    display: block;
+  }
+
+  .hamburger-inner::before {
+    top: -8px;
+  }
+
+  .hamburger-inner::after {
+    bottom: -8px;
+  }
+
+  .hamburger.is-active .hamburger-inner {
+    transform: rotate(45deg);
+  }
+
+  .hamburger.is-active .hamburger-inner::before {
+    top: 0;
+    opacity: 0;
+  }
+
+  .hamburger.is-active .hamburger-inner::after {
+    bottom: 0;
+    transform: rotate(-90deg);
+  }
+
+  #hamburger-btn > nav {
+    display: block;
+  }
+
+  #hamburger-btn .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 100%;
+    max-width: 250px;
+    flex-direction: column;
+    gap: 0;
+    padding: 80px 0 20px;
+    transition: right 0.3s ease;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    border-radius: 0;
+    margin: 0;
+    z-index: 999;
+    list-style: none;
+    text-align: center;
+    align-items: center;
+  }
+
+  #hamburger-btn .nav-links.show {
+    right: 0;
+  }
+
+  #hamburger-btn .nav-links li {
+    border-bottom: 1px solid #eee;
+  }
+
+  #hamburger-btn .nav-links li:last-child {
+    border-bottom: none;
+  }
+
+  #hamburger-btn .nav-links a {
+    font-size: 18px;
+    font-weight: var(--h2-font-weight);
+    display: block;
+    padding: 20px;
+    color: var(--black-text-color);
+  }
+
+  #hamburger-btn .nav-links a:hover {
+    background-color: #f5f5f5;
+    color: var(--hover-color);
+  }
+
+  .home img,
+  .about img {
+    width: 100%;
+    left: 0;
+    position: static;
+  }
+
+  .coffee-menu,
+  .other-drinks-menu-main {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .coffee-menu .col-1,
+  .coffee-menu .col-2,
+  .other-drinks-menu-main .col-1,
+  .other-drinks-menu-main .col-2 {
+    gap: 20px;
+  }
+
+  .container-drink-menu {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .teas ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sweet-items,
+  .savory-items {
+    gap: 30px;
+  }
+
+  .container-weekly-events {
+    padding: 0 15px;
+  }
+
+  .shaded-box,
+  .non-shaded-box {
+    padding: 15px 10px;
+  }
+
+  .container-weekly-events p {
+    padding: 0 10px;
+  }
+}
+
+/*----------------------------------------- MOBILE 500px -----------------------------------------*/
+
+@media (max-width: 500px) {
+  .hero {
+    position: relative;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 0;
+    gap: 0;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+  }
+
+  .logo img {
+    height: 200px;
+  }
+
+  .navbar > nav {
+    display: none;
+  }
+
+  #hamburger-btn {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 60px;
+    z-index: 1000;
+  }
+
+  #hamburger-btn .hamburger {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    background: #fff;
+    border: none;
+    border-radius: 8px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .hamburger-box {
+    width: 30px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+  }
+
+  .hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+  }
+
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    width: 30px;
+    height: 3px;
+    background-color: var(--black-text-color);
+    border-radius: 4px;
+    position: absolute;
+    transition: transform 0.15s ease;
+  }
+
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    content: "";
+    display: block;
+  }
+
+  .hamburger-inner::before {
+    top: -8px;
+  }
+
+  .hamburger-inner::after {
+    bottom: -8px;
+  }
+
+  .hamburger.is-active .hamburger-inner {
+    transform: rotate(45deg);
+  }
+
+  .hamburger.is-active .hamburger-inner::before {
+    top: 0;
+    opacity: 0;
+  }
+
+  .hamburger.is-active .hamburger-inner::after {
+    bottom: 0;
+    transform: rotate(-90deg);
+  }
+
+  #hamburger-btn > nav {
+    display: block;
+  }
+
+  #hamburger-btn .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 100%;
+    max-width: 250px;
+    flex-direction: column;
+    gap: 0;
+    padding: 80px 0 20px;
+    transition: right 0.3s ease;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    border-radius: 0;
+    margin: 0;
+    z-index: 999;
+    list-style: none;
+    text-align: center;
+    align-items: center;
+  }
+
+  #hamburger-btn .nav-links.show {
+    right: 0;
+  }
+
+  #hamburger-btn .nav-links li {
+    border-bottom: 1px solid #eee;
+  }
+
+  #hamburger-btn .nav-links li:last-child {
+    border-bottom: none;
+  }
+
+  #hamburger-btn .nav-links a {
+    font-size: 18px;
+    font-weight: var(--h2-font-weight);
+    display: block;
+    padding: 20px;
+    color: var(--black-text-color);
+  }
+
+  #hamburger-btn .nav-links a:hover {
+    background-color: #f5f5f5;
+    color: var(--hover-color);
+  }
+
+  .container-home,
+  .container-about,
+  .container-food-menu,
+  .container-drink-menu,
+  .container-weekly-events {
+    padding: 0 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  .home-text,
+  .about-text,
+  .home-text-review {
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .home-text-review {
+    text-align: left;
+  }
+
+  .home {
+    align-items: center;
+    text-align: center;
+  }
+
+  .about {
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .home-cta {
+    margin: 15px auto;
+  }
+
+  .teas ul {
+    grid-template-columns: 1fr;
+  }
+
+  .sweet-items img,
+  .savory-items img {
+    width: 250px;
+    height: 230px;
+  }
+
+  .coffee-menu .col-1,
+  .coffee-menu .col-2,
+  .other-drinks-menu-main .col-1,
+  .other-drinks-menu-main .col-2 {
+    gap: 15px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .socials img {
+    width: 40px;
+  }
+
+  .container-weekly-events {
+    padding: 0 10px;
+  }
+
+  .container-weekly-events p {
+    text-align: center;
+  }
+}
+
+/*----------------------------------------- MOBILE 4750px -----------------------------------------*/
+
+@media (max-width: 475px) {
+.hero {
+    padding-bottom: 75px;
+  }
+
+  .logo img {
+    height: 175px;
+  }
+
+   #hamburger-btn {
+    right: 10px;
+  }
+
+}
+
+</style>
+
+</head>
+<body> 
+      <!------------------------------------------ HERO ---------------------------------------->
+
+  <div class="hero">
+    
+    <img src="images/hero3b.webp" alt="hero">
+
+  <header class="navbar">
+
+    <div class="logo">
+      <a href="index.html">
+      <img src="images/logo.webp" alt="logo">
+      </a>
+    </div>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="drink-menu.html">Drink Menu</a></li>
+        <li><a href="food-menu.html">Food Menu</a></li>
+        <li><a href="weekly-events.html">Weekly Events</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    
+    <div id="hamburger-btn">
+        <button class="hamburger hamburger--elastic" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+      </button>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="drink-menu.html">Drink Menu</a></li>
+        <li><a href="food-menu.html">Food Menu</a></li>
+        <li><a href="weekly-events.html">Weekly Events</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  </header>
+
+    </div>
+
+   <!------------------------------------------ Home (Fall Special) ---------------------------------------->
+
+  <div class="container-home">
+
+    <h1>Fall Special!</h1>
+
+    <h2>Pumpkin Cookies with Pumpkin Coffee, $4.00</h2>
+
+    <div class="home">
+      <div><img src="images/special.webp" alt="Pumpkin cookies and coffee"></div>
+      <div class="home-text">
+        <p>Enjoy the taste of fall with our home-made pumpkin cookies and pumpkin spiced coffee!</p>
+        <p>Our cookies are baked fresh each day to ensure you have that just-out-of-the-oven experience!</p>
+        <p><strong>Find more delicious menu items with our food menu:</strong></p>
+        <button class="home-cta"><a href="food-menu.html">Food Menu</a></button>
+      </div>
+    </div>
+
+    <div class="home-text-review">
+      <p><strong>* * * * * Julia, Yelp, 2025</strong></p>
+      <p>Brews & Bonds is an absolute gem! From the moment you walk in, you’re greeted by the comforting aroma of freshly brewed coffee and the cozy, welcoming atmosphere that makes you want to stay awhile. The drinks are crafted with care — every latte and seasonal special is full of flavor and perfectly balanced. The food is just as impressive — fresh, delicious, and clearly made with love.</p>
+      <p>What truly makes this place special, though, is the vibe. It’s the perfect spot to slow down, unwind, and really connect — whether you’re catching up with friends, spending quiet time with a loved one, or even just taking a moment for yourself. Brews & Bonds has become my go-to café for both great coffee and genuine community.</p>
+      <p>Can’t recommend it highly enough! - Julia</p>
+    </div>
+
+    <!------------------------------------------ About ---------------------------------------->
+
+  <div class="container-about">
+
+  <h1>Who Are We?</h1>
+
+    <div class="about">
+      <div><img src="images/thecouple2.webp" alt="Couple enjoying coffee outdoors"></div>
+      <div class="about-text">
+        <p>While in San Francisco, we shared an unwavering love for the rich aromas, the intricate flavors, and the sense of community that surrounded a simple cup of joe.</p>
+        <p>After moving to Harrisburg, PA, we decided it was the perfect place to bring our coffee dreams to life. Inspired by our time in San Francisco, Brews & Bonds captures the essence of the vibrant coffee culture we experienced, creating a sanctuary where people can gather, connect, and forge new friendships.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!------------------------------------------ Food Menu ---------------------------------------->
+
+  <div class="container-food-menu">
+
+    <h3>Our kitchen is open 7 am - 7 pm everyday!</h3>
+
+  <h1>Sweet</h1>
+
+    <div class="sweet-items">
+
+        <div>
+          <p>Muffin - $2.50</p>
+          <img src="images/muffin.webp" alt="mufffin">
+        </div>
+
+        <div>
+          <p>Scone - $3.00</p>
+          <img src="images/pastry.webp" alt="scone">
+        </div>
+
+        <div>
+          <p>Fruit Parfait - $4.50</p>
+          <img src="images/yogurt.webp" alt="scone">
+        </div>
+
+    </div>
+
+    <h1>Savory</h1>
+
+    <div class="savory-items">
+
+        <div>
+          <p>Croissant - $2.50</p>
+          <img src="images/croissant.webp" alt="mufffin">
+        </div>
+
+        <div>
+          <p>Bagel - $3.00</p>
+          <img src="images/bagel.webp" alt="scone">
+        </div>
+
+        <div>
+          <p>Ham & Cheese - $6.00</p>
+          <img src="images/sandwitch.webp" alt="scone">
+        </div>
+
+        <div>
+          <p>Chicken Salad - $2.50</p>
+          <img src="images/chx-salad.webp" alt="mufffin">
+        </div>
+
+        <div>
+          <p>Quiche - $5.50</p>
+          <img src="images/quiche.webp" alt="scone">
+        </div>
+
+        <div>
+          <p>Soup of the Day - $6.50</p>
+          <img src="images/soup.webp" alt="scone">
+        </div>
+
+    </div>
+
+  </div>
+
+  <!------------------------------------------ Drink Menu ---------------------------------------->
+
+  <div class="container-drink-menu">
+
+     <div class="coffee-drinks">
+      
+        <h1>Coffee & Espresso</h1>
+        
+        <img src="images/lattes.webp" alt="coffee and espresso">
+
+        <div class=" coffee-menu">
+          <div class="col-1">
+            <div class="drink-names">
+              <p>Americano</p>
+              <p>Cappuccino</p>
+              <p>Cold Brew</p>
+              <p>Espresso</p>
+              <p>Flat White</p>
+            </div>
+            <div class="drink-prices">
+              <p>$3.00</p>
+              <p>$4.00</p>
+              <p>$4.50</p>
+              <p>$2.50</p>
+              <p>$4.50</p>
+            </div>
+          </div>
+          <div class="col-2">
+                 <div class="drink-names">
+              <p>Frappuccino</p>
+              <p>Iced Coffee</p>
+              <p>Latte</p>
+              <p>Macchiato</p>
+              <p>Mocha</p>
+            </div>
+            <div class="drink-prices">
+              <p>$3.00</p>
+              <p>$4.00</p>
+              <p>$4.50</p>
+              <p>$2.50</p>
+              <p>$4.50</p>
+            </div>
+          </div>
+        </div>
+
+     </div>
+
+     <div class="other-drinks">
+        <h1>Other Beverages</h1>
+        
+        <img src="images/drinks.webp" alt="other drinks">
+
+         <div class=" other-drinks-menu">
+
+          <div class="other-drinks-menu-main">
+          <div class="col-1">
+            <div class="drink-names">
+              <p>Chai Tea Latte</p>
+              <p>Hot Chocolate</p>
+              <p>Herbal Tea</p>
+            </div>
+            <div class="drink-prices">
+              <p>$4.50</p>
+              <p>$3.50</p>
+              <p>$3.00</p>
+            </div>
+          </div>
+          <div class="col-2">
+              <div class="drink-names">
+              <p>Iced Tea</p>
+              <p>Matcha Latte</p>
+              <p>Smoothie</p>
+            </div>
+            <div class="drink-prices">
+              <p>$3.50</p>
+              <p>$4.50</p>
+              <p>$5.00</p>
+            </div>
+          </div>
+          </div>
+
+          <div class="teas">
+              <h2>Herbal Teas</h2>
+              <ul>
+                <li>Genmaicha</li>
+                <li>Green</li>
+                <li>Herbal Blend</li>
+                <li>Jasmine</li>
+                <li>Lemon</li>
+                <li>Matcha</li>
+                <li>Mint</li>
+                <li>Assam</li>
+                <li>Berry Infusion</li>
+                <li>Chai</li>
+                <li>Chamomile</li>
+                <li>Darjeeling</li>
+                <li>Earl Gray</li>
+                <li>Eng. Breakfast</li>
+                <li>Oolong</li>
+                <li>Peppermint</li>
+                <li>Pu-erh</li>
+                <li>Rooibos</li>
+                <li>Sencha</li>
+                <li>White</li>
+              </ul>
+          </div>
+
+        </div>
+
+     </div>
+
+  </div>
+
+  <!------------------------------------------ Weekly Events ---------------------------------------->
+
+  <div class="container-weekly-events">
+
+    <h1>Weekly Events</h1>
+    <p>
+      Please note that event dates and times are subject to change. Please call us or check our facebook page for updates.
+    </p>
+
+     <div class="shaded-box">
+      <h2>Mondays</h2>
+      <p><strong>6 am - 7:30 pm</strong></p>
+      <p>Morning Yoga Class: Start your week with a relaxing yoga session.</p>
+      <p><strong>7 pm - 9 pm</strong></p>
+      <p>Live Acoustic Music: Enjoy soulful acoustic performances by local artists.</p>
+     </div>
+     
+     <div class="non-shaded-box">
+      <h2>Tuesdays</h2>
+      <p><strong>6 am - 7:30 am</strong></p>
+      <p>Coffee Tasting Workshop: Learn about different coffee brewing methods and taste various specialty coffees. </p>
+      <p><strong>8 pm - 10 pm</strong></p>
+      <p>Open Mic Night: Showcase your talent or enjoy the performances of local musicians, poets, and comedians. </p>
+     </div>
+
+     <div class="shaded-box">
+      <h2>Wednesdays</h2>
+      <p><strong>7 am - 7 pm</strong></p>
+      <p>Art Exhibition: Explore the works of local artists displayed throughout the coffee shop.</p>
+      <p><strong>7 pm - 9 pm</strong></p>
+      <p>Trivia Night: Test your knowledge and compete with friends in a fun-filled trivia competition.</p>
+     </div>
+
+     <div class="non-shaded-box">
+      <h2>Thursdays</h2>
+      <p><strong>5 pm - 7 pm</strong></p>
+      <p>Cooking Class: Join our skilled chef and learn to prepare delicious desserts. Limited spots available, reservations required.</p>
+      <p><strong>6 pm - 9 pm</strong></p>
+      <p>Board Game Night: Gather with friends and enjoy a variety of board games while sipping your favorite drinks.</p>
+     </div> 
+
+     <div class="shaded-box">
+      <h2>Fridays</h2>
+      <p><strong>7:30 pm - 9:30 pm</strong></p>
+      <p>Live Jazz Band: Relax and unwind with the smooth tunes of a live jazz band. </p>
+     </div>
+
+     <div class="non-shaded-box">
+      <h2>Saturdays</h2>
+      <p><strong>10 am - 12 pm (Noon)</strong></p>
+      <p>Family Day: Bring your kids for a special day of face painting, storytelling, and fun activities.  </p>
+      <p><strong>7 pm - 9 pm</strong></p>
+      <p>Poetry Slam: Express your creativity or listen to passionate poets share their work during our poetry slam event. </p>
+    </div>
+
+    <div class="shaded-box">
+      <h2>Sundays</h2>
+      <p><strong>3 pm - 4:30 pm</strong></p>
+      <p>Book Club Meeting: Discuss the latest book selection with fellow book enthusiasts over a cup of coffee. </p>
+      <p><strong>10 am - 2 pm</strong></p>
+      <p>Sunday Brunch: Indulge in a delicious brunch menu accompanied by live acoustic music.</p>
+     </div>
+
+  </div>
+
+  <!------------------------------------------ FOOTER ---------------------------------------->
+
+  <footer>
+    <div class="footer-info">
+      <p>717-123-4567, info@babb.com</p>
+      <p>123 Main St, Harrisburg PA., 17025</p>
+    </div>
+    <div class="footer-hours">
+      <p>Open Everyday 7 am - 7 pm <br> (Some events extend after hours)</p>
+      <p>2025 © Brews & Bonds</p>
+    </div>
+    <div class="socials">
+      <a href="#"><img src="images/ig-bw.webp" alt="Instagram"></a>
+      <a href="#"><img src="images/fb-bw.webp" alt="Facebook"></a>
+    </div>
+  </footer>
+
+  </div>
+
+  <script>
+
+      window.onload = () => {
+  const hamburgerBtn = document.querySelector("#hamburger-btn .hamburger");
+  const navLinks = document.querySelector("#hamburger-btn .nav-links");
+
+  if (hamburgerBtn && navLinks) {
+    hamburgerBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      navLinks.classList.toggle("show");
+      hamburgerBtn.classList.toggle("is-active");
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!event.target.closest("#hamburger-btn")) {
+        navLinks.classList.remove("show");
+        hamburgerBtn.classList.remove("is-active");
+      }
+    });
+
+    const navLinksItems = navLinks.querySelectorAll("a");
+    navLinksItems.forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("show");
+        hamburgerBtn.classList.remove("is-active");
+      });
+    });
+  }
+};
+
+</script>
+
+</body>
+</html>
+

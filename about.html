@@ -6,6 +6,8 @@
     <title>Brews & Bonds</title> 
 
     <link href="hamburgers.css" rel="stylesheet"> 
+    <link href="style.css" rel="stylesheet">
+    <link href="script.js" rel="script">
 
         <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
@@ -14,180 +16,13 @@
 <meta name="apple-mobile-web-app-title" content="MyWebSite" />
 <link rel="manifest" href="/favicon/site.webmanifest" />
 
-    <style>
-
-:root {
-  --header-color: #a14b00;
-  --black-text-color: #000;
-  --hover-color: #2b6783;
-  --body-font-family: 'Instrument Sans', sans-serif;
-  --header-font-family: 'Merriweather', serif;
-}
-
-.hero {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  padding-bottom: 50px;
-}
-
-.hero img {
-  width: 100%;
-  height: auto;
-  display: block;
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
-.navbar {
-  position: absolute;
-  top: 30px;
-  width: 100%;
-  height: 10%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 60%;
-  z-index: 2;
-  box-sizing: border-box;
-}
-
-.logo img {
-  height: 300px; 
-  width: auto;
-  display: block;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  background-color: #fff;
-  padding: 20px;
-  gap: 50px;
-  margin: 0 auto;
-  border-radius: 15px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #000;
-  font-weight: 500;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.container {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 20px 0 20px 0;
-}
-
-h2 {
-  text-align: center;      
-  font-family: var(--header-font-family);
-  color: var(--header-color);
-  font-size: 40px;
-}
-
-.about  {
-  display: flex;
-  flex-direction: row;
-  margin: 0 auto;
-  align-items: center;
-}
-
-.about img {
-  max-width: 800px; 
-  width: 100%;
-  height: auto;
-  display: flex;
-  margin: 0 auto; 
-  align-items: flex-start;
-}
-
-.about-text {
-  padding: 20px;
-  max-width: 600px;
-  font-family: var(--body-font-family);
-}
-
-footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1.5rem;
-  background-color: #f9f9f9;
-  border-top: 1px solid #ddd;
-  text-align: center;
-}
-
-footer p {
-  margin: 0.3rem 0;
-  font-size: 0.9rem;
-}
-
-.socials img {
-  width: 60px;
-  margin: 0 8px;
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    position: static;
-    background: #fff;
-    padding: 1rem 0;
-  }
-
-  .logo img {
-    height: 70px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .about img {
-    max-width: 100%;
-    margin-left: 0;
-  }
-}
-
-</style>
 
 </head>
-<body>
+<body> 
 
-  <div class="hero">
+       <div class="container-about">
 
-    <img src="images/hero3b.webp" alt="hero">
-
-  <header class="navbar">
-
-     <div class="logo">
-      <a href="index.html">
-      <img src="images/logo.webp" alt="logo">
-      </a>
-    </div>
-
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#">Drink Menu</a></li>
-        <li><a href="#">Food Menu</a></li>
-        <li><a href="#">Weekly Events</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
-    </nav>
-
-  </header>
-
-    </div>
-
-  <div class="container">
-
-    <h2>Who Are We?</h2>
+  <h1>Who Are We?</h1>
 
     <div class="about">
       <div><img src="images/thecouple2.webp" alt="Couple enjoying coffee outdoors"></div>
@@ -197,13 +32,17 @@ footer p {
       </div>
     </div>
 
+  </div>
+
+  <!------------------------------------------ FOOTER ---------------------------------------->
+
   <footer>
     <div class="footer-info">
       <p>717-123-4567, info@babb.com</p>
       <p>123 Main St, Harrisburg PA., 17025</p>
     </div>
     <div class="footer-hours">
-      <p>Open Everyday 7 am - 7 pm</p>
+      <p>Open Everyday 7 am - 7 pm <br> (Some events extend after hours)</p>
       <p>2025 © Brews & Bonds</p>
     </div>
     <div class="socials">
@@ -211,31 +50,6 @@ footer p {
       <a href="#"><img src="images/fb-bw.webp" alt="Facebook"></a>
     </div>
   </footer>
-
-  </div>
-
-  <script>
-
-window.onload = () => {
-  const toggleNavBtn = document.getElementById("toggle-nav-btn");
-  const mobileSteps = document.getElementById("mobile-secondary-nav");
-
-  toggleNavBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    mobileSteps.classList.toggle("show");
-    toggleNavBtn.classList.toggle("is-active");
-  });
-
-  document.addEventListener("click", (event) => {
-    if (!event.target.closest(".steps-item")) {
-      mobileSteps.classList.remove("show");
-      toggleNavBtn.classList.remove("is-active");
-    }
-  });
-};
-
-</script>
-
+  
 </body>
 </html>
-
