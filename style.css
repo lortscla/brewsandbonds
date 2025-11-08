@@ -96,6 +96,14 @@ html, body {
   display:flex;
   flex-direction: row;
   gap: 50px;
+  max-width: 85vw;
+  
+  justify-content: center;
+}
+
+.container-weekly-events {
+  max-width: 85vw;
+  align-content: center;
 }
 
 .container-weekly-events p {
@@ -103,10 +111,6 @@ html, body {
   font-family: var(--header-font-family);
   color: var(--header-color);
   font-size: var(--body-font-size);
-}
-
-.container-weekly-events p{
-  align-content: center;
 }
 
 .shaded-box {
@@ -179,7 +183,8 @@ h3 {
   gap: 40px;
 }
 
-.other-drinks-menu-main .col-1 .drink-names {
+.other-drinks-menu-main .col-1 .drink-names,
+.other-drinks-menu-main .col-2 .drink-names {
   width:max-content;
 }
 
@@ -226,6 +231,16 @@ h3 {
   height: auto;
   display: block;
   position: relative;
+}
+
+.coffee-drinks img {
+   height: 46%;
+  width: auto;
+}
+
+.other-drinks img {
+  height: 50%;
+  width: auto;
 }
 
 .sweet-items,
@@ -334,6 +349,22 @@ footer p {
   display: none;
 }
 
+/*----------------------------------------- MOBILE 1300px -----------------------------------------*/
+
+@media (max-width: 1300px) {
+
+  .container-drink-menu {
+    flex-wrap: wrap;
+  }
+
+  .coffee-drinks img,
+  .other-drinks img {
+   width: 85vw;
+    height: auto;
+}
+
+}
+
 /*----------------------------------------- MOBILE 1080px -----------------------------------------*/
 
 @media (max-width: 1080px) {
@@ -372,6 +403,12 @@ footer p {
 @media (max-width: 800px) {
   .hero {
     position: relative;
+  }
+
+  .container-drink-menu {
+    max-width: 85vw;
+    justify-content: center;
+    box-sizing: border-box;
   }
 
   .navbar {
@@ -512,25 +549,72 @@ footer p {
     color: var(--hover-color);
   }
 }
+/*----------------------------------------- MOBILE 600px -----------------------------------------*/
+
+@media (max-width: 600px) {
+
+  .container-drink-menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .coffee-menu,
+  .other-drinks-menu-main {
+    flex-direction: column;
+    align-items: center;
+    gap:0px;
+  }
+
+  .coffee-menu .col-1,
+  .coffee-menu .col-2,
+  .other-drinks-menu-main .col-1,
+  .other-drinks-menu-main .col-2 {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  .coffee-menu .col-1,
+  .other-drinks-menu-main .col-1 {
+    padding-top: 20px;
+  }
+
+  .coffee-menu .col-2,
+  .other-drinks-menu-main .col-2 {
+    margin-top: -19px;
+  }
+
+  .other-drinks-menu-main .col-2 {
+    gap: 55px;
+  }
+
+  .coffee-menu img,
+  .other-drinks img {
+    width: 85vw;
+    height: auto;
+  }
+
+  .teas ul {
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+  }
+
+  .teas {
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
 
 /*----------------------------------------- MOBILE 500px -----------------------------------------*/
 
 @media (max-width: 500px) {
   .hero {
     min-height: 200px;
-  }
-
-  .navbar {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    padding: 0;
-    gap: 0;
-    background: transparent;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
   }
 
   .logo {
@@ -552,6 +636,54 @@ footer p {
     padding-bottom: 75px;
   }
 
+.container-drink-menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 27px;
+  }
+  .coffee-drinks,
+  .other-drinks {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .coffee-drinks img,
+  .other-drinks img,
+  .container-about img {
+    width: 90%;
+    max-width: 320px; 
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .container-food-menu img {
+    max-width: 310px;
+  }
+
+  .about img {
+    width: 90%;
+    max-width: 320px;
+    height: auto;
+    left: 0;
+    position: static;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .teas ul li {
+    font-size: 16px;
+  }
   .logo img {
     width: 150px;
     height: auto;
