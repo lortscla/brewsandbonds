@@ -379,7 +379,6 @@ footer p {
     width: 100%;
     padding: 0;
     gap: 0;
-    background: transparent;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -399,34 +398,35 @@ footer p {
     display: none;
   }
 
-   #hamburger-btn {
+    #hamburger-btn {
     display: block;
     position: absolute;
+    top: 100px;
     right: 60px;
-    top: 150px;
     z-index: 1000;
+    background-color: #fff;
+    border-radius: 5px;
   }
 
-  .hamburger {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  #hamburger-btn .hamburger {
+    display: block;
+    cursor: pointer;
     background: #fff;
     border: none;
     border-radius: 8px;
     width: 60px;
-    height: 60px;
-    cursor: pointer;
-    position: relative;
+    height: 50px;
+    padding-bottom: 35px;
   }
 
   .hamburger-box {
     width: 30px;
     height: 20px;
     display: flex;
+    background: #fff;
     align-items: center;
     justify-content: center;
-    position: relative;
+    position: absolute;
   }
 
   .hamburger-inner {
@@ -448,30 +448,16 @@ footer p {
     height: 3px;
     background-color: var(--black-text-color);
     border-radius: 4px;
-    transition: transform 0.15s ease, opacity 0.15s ease;
+    transition: transform 0.15s ease;
     left:0;
   }
 
-  .hamburger-inner::before {
-    top: -8px;
-  }
-
-  .hamburger-inner::after {
-    bottom: -8px;
-  }
-
-  .hamburger.is-active .hamburger-inner {
-    transform: rotate(45deg);
-  }
-
   .hamburger.is-active .hamburger-inner::before {
-    top: 0;
     opacity: 0;
   }
 
   .hamburger.is-active .hamburger-inner::after {
     bottom: 0;
-    transform: rotate(-90deg);
   }
 
   #hamburger-btn > nav {
@@ -479,29 +465,29 @@ footer p {
     position: relative;
   }
 
-  /* UPDATED STYLES FOR FULL WIDTH CENTERED DROPDOWN */
   #hamburger-btn .nav-links {
     position: fixed;
-    top: -100%; /* Changed from right: -100% */
+    top: 200px; 
+    display:none;
     left: 0;
     width: 100%;
-    max-width: 100%; /* Changed from 250px */
+    max-width: 100%; 
     flex-direction: column;
     gap: 0;
     padding: 20px 0;
-    transition: top 0.3s ease; /* Changed from right to top */
+    transition: top 0.3s ease; 
     background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Changed shadow direction */
     border-radius: 0;
     margin: 0;
-    z-index: 998; /* Lower than button */
+    z-index: 998; 
     list-style: none;
     text-align: center;
     align-items: center;
   }
 
   #hamburger-btn .nav-links.show {
-    top: 0; /* Changed from right: 0 */
+    top: 200px;
+    display: flex;
   }
 
   #hamburger-btn .nav-links li {
@@ -514,7 +500,7 @@ footer p {
   }
 
   #hamburger-btn .nav-links a {
-    font-size: 18px;
+    font-size: 25px;
     font-weight: var(--h2-font-weight);
     display: block;
     padding: 20px;
@@ -531,7 +517,6 @@ footer p {
 
 @media (max-width: 500px) {
   .hero {
-    position: relative;
     min-height: 200px;
   }
 
@@ -558,52 +543,6 @@ footer p {
     height: auto;
   }
 
-  .navbar > nav {
-    display: none;
-  }
-
-  #hamburger-btn {
-    display: block;
-    position: absolute;
-    top: 100px;
-    right: 60px;
-    z-index: 1000;
-  }
-
-  #hamburger-btn .hamburger {
-    display: block;
-    cursor: pointer;
-    background: #fff;
-    border: none;
-    border-radius: 8px;
-    width: 60px;
-    height: 60px;
-  }
-
-  /* UPDATED STYLES FOR FULL WIDTH CENTERED DROPDOWN */
-  #hamburger-btn .nav-links {
-    position: fixed;
-    top: -100%; /* Changed from right: -100% */
-    left: 0;
-    width: 100%;
-    max-width: 100%; /* Changed from 250px */
-    flex-direction: column;
-    gap: 0;
-    padding: 20px 0;
-    transition: top 0.3s ease; /* Changed from right to top */
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border-radius: 0;
-    margin: 0;
-    z-index: 998;
-    list-style: none;
-    text-align: center;
-    align-items: center;
-  }
-
-  #hamburger-btn .nav-links.show {
-    top: 0; /* Changed from right: 0 */
-  }
 }
 
 /*----------------------------------------- MOBILE 475 px -----------------------------------------*/
